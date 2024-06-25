@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientación de contenido</title>
+    <style>
+        .vertical-content {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            border: 1px solid #000;
+            width: 200px;
+            height: 300px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="vertical-content">
+        <p>Este es un párrafo de ejemplo que se mostrará de abajo hacia arriba.</p>
+        <p>Otro párrafo para mostrar más contenido.</p>
+        <p>Y otro más para verificar la orientación.</p>
+    </div>
+</body>
+</html>

@@ -1,127 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuenta Regresiva</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: rgb(149,237,238);
-            background: linear-gradient(0deg, rgba(149,237,238,1) 0%, rgba(255,255,255,1) 100%);
-            position: relative;
-        }
-        .background {
-            position: absolute;
-            top: 10%;
-            left: 5%;
-            width: 50%;
-            height: 50%;
-            background-image: url('logo.svg');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            opacity: 0.9; /* Ajustar la opacidad según sea necesario */
-            z-index: 0;
-        }
-        .frase{
-            position: absolute;
-            top: 50%;
-            left: 25%;
-            /*font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
-            font-size: 1.5em;
-            /*color: darkgray;*/
-        }
-        .countdown {
-            text-align: center;
-            background: #fff;
-            padding: 30px;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            /*border-radius: 10px 0px 0px;*/
-            position: absolute;
-            top: 70%;
-            left: 0%;
-            z-index: 1;
-            font-size: 1.5em;
-            opacity: 0.7; /* Ajustar la opacidad según sea necesario */
-            width: 80%;
-        }
-        .countdown div {
-            font-size: 1.5em;
-            margin: 10px 0;
-            display: inline-block;
-        }
-        .faltan{
-            font-size: 1rem;
-        }
-
-        .nuProyecto{
-            position: absolute;
-            top: 5%;
-            left: 10%;
-        }
-
-        .months{
-            font-weight: bold;
-            font-size: 1.7;
-        }
-
-        .days{
-            font-weight: bold;
-            font-size: 1.7;
-        }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cuenta regresiva</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
 </head>
 <body>
-    <div class="background"></div>
-    <div class="countdown">
-        <div class="">Faltan </div>
-        <div class="months" id="months">Meses: 0</div>
-        <div class="days" id="days">Días: 0</div>
-        <div class=""> para nuestra salida en vivo</div>
-    </div>
-
-    <div class="nuProyecto">
-        <h1>Nuestro proyecto</h1>
-    </div>
-
-    <div class="frase">
-        “Los grandes logros siempre se producen en un marco de grandes expectativas”. <br>
-        Charles F. Kettering, inventor e ingeniero estadounidense
-    </div>
-
-    <script>
-        // Fecha objetivo para la cuenta regresiva (formato: Año, Mes (0-11), Día, Hora, Minuto, Segundo)
-        const targetDate = new Date('2025-07-02T00:00:00');
+    <div class="row">
         
-        // Intervalo de refresco en milisegundos (1000 ms = 1 segundo, 60000 ms = 1 minuto)
-        const refrescarCada = 1000; // Cambiar a 60000 para refrescar cada minuto
-
-        function actualizarCuentaRegresiva() {
-            const now = new Date();
-            const tiempoRestante = targetDate - now;
-
-            if (tiempoRestante <= 0) {
-                document.getElementById('months').textContent = '0 Meses';
-                document.getElementById('days').textContent = '0 Días';
-                return;
-            }
-
-            const months = Math.floor(tiempoRestante / (1000 * 60 * 60 * 24 * 30));
-            const days = Math.floor((tiempoRestante % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
-
-            document.getElementById('months').textContent = `${months} Meses`;
-            document.getElementById('days').textContent = `${days} Días`;
-        }
-
-        setInterval(actualizarCuentaRegresiva, refrescarCada);
-        actualizarCuentaRegresiva(); // Ejecutar inmediatamente la primera vez
-    </script>
+        <div class="col">
+            <div class="logo">
+                <img src="./CONTADOR SAP_fijo.jpg" alt="Logo">
+            </div>
+        </div>
+        
+    </div>    
 </body>
 </html>
