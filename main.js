@@ -20,7 +20,7 @@ function actualizarCuentaRegresiva() {
 
     // document.getElementById('months').textContent = `${months} Meses`;
     // document.getElementById('days').textContent = `${days} Días`;
-    document.getElementById('contador').textContent = `${months} Meses` + `${days} Días`;
+    document.getElementById('contador').textContent = ` ${months} Meses` + ` ${days} Días`;
 }
 
 setInterval(actualizarCuentaRegresiva, refrescarCada);
