@@ -17,11 +17,31 @@
             background-position: center;
             height: 100%;
         }
+
+        #contador {
+            /*rotar 90 grados a la derecha*/
+            transform: rotate(270deg) !important;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        #months, #days {
+            /*texto desde button hacia top*/
+            writing-mode: vertical-rl;
+        }
     </style>
 </head>
 <body>
     <div class="background">
-        
+        <div id="contador">
+            <!-- hola -->
+        </div>
     </div>
+    <script src="./main.js"></script>
 </body>
 </html>
